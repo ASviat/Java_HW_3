@@ -1,0 +1,40 @@
+
+/**
+ * Задан целочисленный список ArrayList. Найти минимальное, максимальное и среднее арифметическое из этого списка
+ */
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
+
+public class Task03 {
+
+    public static void main(String[] args) {
+        Scanner myInput = new Scanner(System.in);
+        System.out.println("Введите количество вводимых значений: ");
+        int numForArray = myInput.nextInt();
+        if (numForArray <= 1) {
+            System.out.println("Извольте указать массив минимум из 2 элементов!");
+            System.exit(numForArray);
+        }
+
+        ArrayList<Integer> myList = new ArrayList<Integer>(numForArray);
+
+        for (int i = 0; i < numForArray; i++) {
+            System.out.printf("Введите значение %d: ", i + 1);
+            myList.add(myInput.nextInt());
+        }
+
+        myInput.close();
+
+        int mySum = 0;
+
+        for (Integer i : myList) {
+            mySum += i;
+        }
+
+        System.out.printf("Среднее значение = %d\n", mySum / numForArray);
+        System.out.printf("Максимальное значение = %d\n", Collections.max(myList));
+        System.out.printf("Минимальное значение = %d", Collections.min(myList));
+    }
+
+}
