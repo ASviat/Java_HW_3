@@ -36,5 +36,4 @@ public class Task03 {
         System.out.printf("Максимальное значение = %d\n", Collections.max(myList));
         System.out.printf("Минимальное значение = %d", Collections.min(myList));
     }
-
 }
