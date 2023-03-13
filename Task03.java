@@ -37,3 +37,5 @@ public class Task03 {
         System.out.printf("Минимальное значение = %d", Collections.min(myList));
     }
 }
+
+
